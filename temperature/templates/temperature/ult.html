@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="5">
+<style>
+body {
+    height: 100%;
+    margin: 0;
+    background-image: url("https://i.pinimg.com/originals/41/00/bb/4100bb76ccdadccc885ea32158602a33.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+    h1{
+        font-size:40px;
+        font-color:white;
+        }
+</style>
+</head>
+<body>
+<center><font color="white"><b><i><h1>ULTRA SONIC SENSOR</h1></i></b></font></center>
+
+<table>
+
+<tr height="200">
+<td width="400"></td>
+<td>
+<font color="white">
+ <h1>
+The  ultra sonic sensor value is {{ult}}cm
+</h1>
+</font>
+</td>
+</tr>
+ 
+</table>
+<table> 
+
+<tr height="400">
+<td width="700"></td>
+<td>
+<style>
+     .pieContainer {
+          height: 300px;
+     }
+     .pieBackground {
+          background-color: #A9A9A9 ;
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          -moz-border-radius: 150px;
+          -webkit-border-radius: 150px;
+          -o-border-radius: 150px;
+          border-radius: 150px;
+          -moz-box-shadow: -1px 1px 3px #000;
+          -webkit-box-shadow: -1px 1px 3px #000;
+          -o-box-shadow: -1px 1px 3px #000;
+          box-shadow: -1px 1px 3px #000;
+     } 
+     .pie {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          -moz-border-radius: 150px;
+          -webkit-border-radius: 150px;
+          -o-border-radius: 150px;
+          border-radius: 150px;
+          clip: rect(0px, 150px, 300px, 0px);
+     }
+     .hold {
+          position: absolute;
+	 width: 300px;
+          height: 300px;
+          -moz-border-radius: 150px;
+          -webkit-border-radius: 150px;
+          -o-border-radius: 150px;
+          border-radius: 150px;
+          clip: rect(0px, 300px, 300px, 150px);
+     }
+     #pieSlice1 .pie {
+          background-color: #00008B ;
+          -webkit-transform:rotate({{ult}}deg);
+          -moz-transform:rotate({{ult}}deg);
+          -o-transform:rotate({{ult}}deg);
+          transform:rotate({{ult}}deg);
+     }
+</style>
+
+<div class="pieContainer">
+<div class="pieBackground"></div>
+     <div id="pieSlice1" class="hold">
+     <div class="pie"></div>
+     </div>
+</div>    
+
+
+</td></tr>
+</table>
+    
+</body>
+</style>
+</html>

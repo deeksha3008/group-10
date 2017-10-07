@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="5">
+<style>
+body {
+    height: 100%;
+    margin: 0;
+    background-image: url("http://ota-tokyo.com/wp-content/uploads/2016/10/raindrops.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+    h1{
+        font-size:40px;
+        font-color:white;
+        }
+</style>
+</head>
+<body>
+<center><b><i><h1>HUMIDITY SENSOR</h1></i></b></center>
+
+<table>
+
+<tr height="200">
+<td width="200"></td>
+<td>
+ <h1>
+The humidity value is {{hum}}degrees
+</h1>
+</td>
+</tr>
+ 
+</table>
+<table> 
+
+<tr height="100">
+<td width="600"></td>
+<td>
+<style>
+     .pieContainer {
+          height: 300px;
+     }
+     .pieBackground {
+          background-color: #1b458b;
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          -moz-border-radius: 150px;
+          -webkit-border-radius: 150px;
+          -o-border-radius: 150px;
+          border-radius: 150px;
+          -moz-box-shadow: -1px 1px 3px #000;
+          -webkit-box-shadow: -1px 1px 3px #000;
+          -o-box-shadow: -1px 1px 3px #000;
+          box-shadow: -1px 1px 3px #000;
+     } 
+     .pie {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          -moz-border-radius: 150px;
+          -webkit-border-radius: 150px;
+          -o-border-radius: 150px;
+          border-radius: 150px;
+          clip: rect(0px, 150px, 300px, 0px);
+     }
+     .hold {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          -moz-border-radius: 150px;
+          -webkit-border-radius: 150px;
+          -o-border-radius: 150px;
+          border-radius: 150px;
+          clip: rect(0px, 300px, 300px, 150px);
+     }
+     #pieSlice1 .pie {
+          background-color: MediumVioletRed ;
+          -webkit-transform:rotate({{hum}}deg);
+          -moz-transform:rotate({{hum}}deg);
+          -o-transform:rotate({{hum}}deg);
+          transform:rotate({{hum}}deg);
+     }
+</style>
+
+<div class="pieContainer">
+<div class="pieBackground"></div>
+     <div id="pieSlice1" class="hold">
+     <div class="pie"></div>
+     </div>
+</div>    
+
+
+</td></tr>
+</table>
+    
+</body>
+</style>
+</html>
